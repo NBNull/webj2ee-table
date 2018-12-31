@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		table{
+			margin: 10px auto;
+			table-layout: fixed;
+			border-collapse: collapse;
+			border: 1px solid blue;
+		}
+		td{ border: 1px dashed red; }
+
+		table{
+			width: 240px;
+		}
+
+		col[name=col1],
+		col[name=col2],
+		col[name=col3] {
+			width: 50px;
+		}
+
+		col[name=col4],
+		col[name=col5],
+		col[name=col6] {
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<col name="col1">
+		<col name="col2">
+		<col name="col3">
+		<caption>tableWidth &gt; sum(colWidth)</caption>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>这个单元格中的内容有点宽</td>
+			</tr>
+			<tr>
+				<td>这个单元格中的内容有点宽</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table>
+		<col name="col4">
+		<col name="col5">
+		<col name="col6">
+		<caption>tableWidth &lt; sum(colWidth)</caption>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>这个单元格中的内容有点宽</td>
+			</tr>
+			<tr>
+				<td>这个单元格中的内容有点宽</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

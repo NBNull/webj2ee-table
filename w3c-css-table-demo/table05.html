@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table { 
+			background: rgba(255, 0, 0, 0.25);
+			border: solid black;
+			font-size: 30px;
+			line-height: 2;
+			text-align: center;
+        }
+
+        col { width: 30px; }
+
+        colgroup[name=g1] { background: rgba(255, 255, 0, 0.25); }
+        
+		col[name=col1],
+		col[name=col2] {
+			background: rgba(128, 128, 0, 0.25);
+		}
+
+        tr[name=row1],
+        tr[name=row2] {
+        	background: rgba(128, 255, 128, 0.25);
+        }
+
+        td[name=cell1]{
+        	background: rgba(0, 0, 0, 0.25);
+        }
+	</style>
+</head>
+<body>
+	<table>
+		<colgroup name="g1">
+			<col name="col1"/>
+			<col name="col2"/>
+			<col/>
+			<col/>
+		</colgroup>
+		<col/>
+		<col/>
+		<tbody>
+			<tr name="row1">
+				<td name="cell1"> 1 </td>
+				<td> 2</td>
+				<td> 3 </td>
+				<td> 4 </td>
+				<td> 5 </td>
+				<td> 6</td>
+			</tr>
+			<tr name="row2">
+				<td> 7 </td>
+				<td> 8 </td>
+				<td> 9 </td>
+				<td> A </td>
+				<td> B</td>
+				<td> C </td>
+			</tr>
+			<tr>
+				<td> D </td>
+				<td> E </td>
+				<td> F </td>
+				<td> G </td>
+				<td> H </td>
+				<td> I </td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

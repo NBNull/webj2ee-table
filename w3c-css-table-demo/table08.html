@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		table{
+			width: 240px;
+			margin: 10px auto;
+			table-layout: fixed;
+		}
+
+		/* 边框相关 */
+		table{
+			border-collapse: separate; 
+			border: 1px solid blue;
+			border-spacing: 5px 10px;
+		}
+		td{ border: 2px dashed red; }
+		td.special{
+			border: 10px double green;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<col><col><col>
+		<caption>separate border model</caption>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td class="special">2</td>
+				<td>这个单元格中的内容有点宽</td>
+			</tr>
+			<tr>
+				<td>这个单元格中的内容有点宽</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

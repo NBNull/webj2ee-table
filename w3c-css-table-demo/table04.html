@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		table{
+			border-collapse: collapse;
+		}
+
+		caption{
+			caption-side: top;
+		}
+
+		col[name=xm]{
+			width: 100px;
+			background-color: green;
+			border: 2px solid blue;
+		}
+
+		col[name=xb]{
+			width: 150px;
+			background-color: grey;
+			border: 4px solid red;
+		}
+
+		col[name=csrq]{
+			width: 200px;
+			background-color: red;
+			border: 6px solid grey;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<caption><h2>人员信息表</h2></caption>
+		<col name="xm"/>
+		<col name="xb"/>
+		<col name="csrq"/>
+		<thead>
+			<th>姓名</th>
+			<th>性别</th>
+			<th>出生日期</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>小明</td>
+				<td>男</td>
+				<td>1990.1.1</td>
+			</tr>
+			<tr>
+				<td>小红</td>
+				<td>女</td>
+				<td>1993.4.6</td>
+			</tr>
+			<tr>
+				<td>小刚</td>
+				<td>男</td>
+				<td>1994.7.15</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
