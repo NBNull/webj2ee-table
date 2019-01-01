@@ -9,21 +9,29 @@
 }
 
 
+
+
 /**
- * 带边框的表格
+ * 表格每行的底边始终有边框线
  */
-.webj2ee-table table {
-    border-top: 1px solid #e8e8e8;
+.webj2ee-table th,
+.webj2ee-table td{
+    border-bottom: 1px solid #e8e8e8;
 }
 
-.webj2ee-table table col {
-    border-left: 1px solid #e8e8e8;
+/**
+ * 外边框线 + 列边框线
+ */
+.webj2ee-table-bordered{
+    border: 1px solid #e8e8e8;
+    border-bottom: 0;
+    border-right: 0;
+}
+.webj2ee-table-bordered th,
+.webj2ee-table-bordered td{
     border-right: 1px solid #e8e8e8;
 }
 
-.webj2ee-table-tbody > tr{
-    border-bottom: 1px solid #e8e8e8;
-}
 
 
 

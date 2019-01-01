@@ -10,7 +10,7 @@ module.exports = {
     },
     resolve: {
         alias: {
-            '@rui/webj2ee-table': path.resolve(__dirname, 'src/')
+            'webj2ee-table': path.resolve(__dirname, 'src/')
         }
     },
     devtool: 'source-map',

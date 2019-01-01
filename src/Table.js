@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import classnames from 'classnames';
+
 import { parseColumns } from './_utils';
 
 export default class Table extends React.Component {
@@ -9,7 +11,8 @@ export default class Table extends React.Component {
     }
 
     static propTypes = {
-        data: PropTypes.array
+        data: PropTypes.array,
+        border: PropTypes.bool
     };
 
     render() {
@@ -17,10 +20,15 @@ export default class Table extends React.Component {
         const columns = parseColumns(this.props);
 
         // 取数据
-        const { data } = this.props;
+        const { data, border } = this.props;
+
+        // 边框样式控制
+        const cls = classnames('webj2ee-table', {
+            'webj2ee-table-bordered': border
+        });
 
         return (
-            <div className={'webj2ee-table'}>
+            <div className={cls}>
                 <div className={'webj2ee-table-header'}>
                     <table>
                         {columns.map(({ width }) => {

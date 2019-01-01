@@ -2,7 +2,7 @@ import React from 'react';
 
 import './style.css';
 
-import { Table, Column } from '@rui/webj2ee-table';
+import { Table, Column } from 'webj2ee-table';
 
 export default class App extends React.Component {
     constructor(props) {
@@ -36,7 +36,7 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <Table data={this.state.data}>
+            <Table data={this.state.data} border={true}>
                 <Column dataKey={'date'} head={'日期'} width={180} />
                 <Column dataKey={'name'} head={'姓名'} width={180} />
                 <Column dataKey={'address'} head={'地址'} width={360} />
