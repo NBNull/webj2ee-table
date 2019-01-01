@@ -2,13 +2,30 @@
 
 基于 React 的企业级表格
 
+## Features
+
+-   Support fixed header.
+
+## Install
+
+```
+npm install --save webj2ee-table
+```
+
+### Usage
+
+```
+
+```
+
 ## Props
 
 ### `<Table>`
 
-| 参数     | 说明                   | 类型    | 默认值 |
-| -------- | ---------------------- | ------- | ------ |
-| bordered | 是否展示外边框和列边框 | boolean | false  |
+| 参数       | 说明                   | 类型    | 默认值 |
+| ---------- | ---------------------- | ------- | ------ |
+| data | 数据数组               | any\[]  | -      |
+| bordered   | 是否展示外边框和列边框 | boolean | false  |
 
 ### `<Column>`
 
@@ -16,7 +33,7 @@
 | ------- | -------------------------- | ------ | ------ |
 | dataKey | 列数据在数据项中对应的 key | string | -      |
 | head    | 列头显示文字               | string | -      |
-| width   | 列宽度                     | number | -      |
+| width   | 列宽度                     | number | 120    |
 
 功能名称 功能说明
 数据源的加载 通过 url 加载，并可自定义数据加载前、加载后、加载出现异常的事件
