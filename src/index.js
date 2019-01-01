@@ -1,1 +1,4 @@
-export {default} from "./Table"
+import './less/index.less';
+
+export { default as Table } from './Table';
+export { default as Column } from './Column';

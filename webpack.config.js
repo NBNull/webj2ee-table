@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    mode: "development",
+    mode: 'development',
     entry: './demo/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -10,16 +10,16 @@ module.exports = {
     },
     resolve: {
         alias: {
-            "@rui/webj2ee-table": path.resolve(__dirname, 'src/')
+            '@rui/webj2ee-table': path.resolve(__dirname, 'src/')
         }
     },
-    devtool: "source-map",
+    devtool: 'source-map',
     devServer: {
-        publicPath: "/",
+        publicPath: '/',
         port: 9000,
         open: true,
         hot: true,
-        inline: true,
+        inline: true
     },
     module: {
         rules: [
@@ -27,19 +27,24 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
                 use: {
-                    loader: 'babel-loader',
+                    loader: 'babel-loader'
                 }
             },
             {
-                test: /\.css$/,
+                test: /\.less$/,
                 use: [
-                    'style-loader',
-                    'css-loader',
+                    {
+                        loader: 'style-loader' // creates style nodes from JS strings
+                    },
+                    {
+                        loader: 'css-loader' // translates CSS into CommonJS
+                    },
+                    {
+                        loader: 'less-loader' // compiles Less to CSS
+                    }
                 ]
-            },
+            }
         ]
     },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-    ]
+    plugins: [new webpack.HotModuleReplacementPlugin()]
 };
