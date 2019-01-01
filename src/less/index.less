@@ -1,53 +1,42 @@
-.webj2ee-table{
+@webj2ee-prefix: webj2ee;
+
+@table-prefix-cls: ~"@{webj2ee-prefix}-table";
+
+.@{table-prefix-cls} {
     font-family: "Chinese Quote",-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-}
 
-.webj2ee-table table {
-    min-width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-}
+    table {
+        min-width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+    }
 
+    th,
+    td{
+        padding: 16px;
+    }
 
+    &-header th{
+        background:#fafafa;
+        text-align: left;
+        font-weight: 500;
+    }
 
+    // 表格每行的底边始终有边框线
+    th,
+    td{
+        border-bottom: 1px solid #e8e8e8;
+    }
 
-/**
- * 表格每行的底边始终有边框线
- */
-.webj2ee-table th,
-.webj2ee-table td{
-    border-bottom: 1px solid #e8e8e8;
-}
+    // 外边框线 + 列边框线
+    &-bordered {
+        border: 1px solid #e8e8e8;
+        border-bottom: 0;
+        border-right: 0;
 
-/**
- * 外边框线 + 列边框线
- */
-.webj2ee-table-bordered{
-    border: 1px solid #e8e8e8;
-    border-bottom: 0;
-    border-right: 0;
-}
-.webj2ee-table-bordered th,
-.webj2ee-table-bordered td{
-    border-right: 1px solid #e8e8e8;
-}
-
-
-
-
-
-
-.webj2ee-table-header table{
-    border-radius: 4px 4px 0 0;
-}
-
-.webj2ee-table-thead > tr > th{
-    background:#fafafa;
-    text-align: left;
-    font-weight: 500;
-}
-
-.webj2ee-table-thead > tr > th,
-.webj2ee-table-tbody > tr > td{
-    padding: 16px;
+        th,
+        td{
+            border-right: 1px solid #e8e8e8;
+        }
+    }
 }
