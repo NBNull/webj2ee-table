@@ -15,7 +15,13 @@ export default class Table extends React.Component {
         border: PropTypes.bool
     };
 
+    static defaultProps = {
+        prefixCls: 'webj2ee-table'
+    };
+
     render() {
+        const { prefixCls } = this.props;
+
         // 取得列定义
         const columns = parseColumns(this.props);
 
@@ -23,18 +29,19 @@ export default class Table extends React.Component {
         const { data, border } = this.props;
 
         // 边框样式控制
-        const cls = classnames('webj2ee-table', {
-            'webj2ee-table-bordered': border
+        const cls = classnames({
+            [`${prefixCls}`]: true,
+            [`${prefixCls}-bordered`]: border
         });
 
         return (
             <div className={cls}>
-                <div className={'webj2ee-table-header'}>
+                <div className={`${prefixCls}-header`}>
                     <table>
                         {columns.map(({ width }) => {
                             return <col style={{ width }} />;
                         })}
-                        <thead className={'webj2ee-table-thead'}>
+                        <thead>
                             <tr>
                                 {columns.map(({ head }) => {
                                     return <th>{head}</th>;
@@ -43,12 +50,12 @@ export default class Table extends React.Component {
                         </thead>
                     </table>
                 </div>
-                <div className={'webj2ee-table-body'}>
+                <div className={`${prefixCls}-body`}>
                     <table>
                         {columns.map(({ width }) => {
                             return <col style={{ width }} />;
                         })}
-                        <tbody className={'webj2ee-table-tbody'}>
+                        <tbody>
                             {data.map((record) => {
                                 return (
                                     <tr>
