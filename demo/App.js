@@ -55,6 +55,17 @@ export default class App extends React.Component {
                     <Column dataKey={'name'} head={'姓名'} width={180} />
                     <Column dataKey={'address'} head={'地址'} width={360} />
                 </Table>
+                <h3>固定表头</h3>
+                <Table
+                    data={this.state.data}
+                    border={true}
+                    stripe={true}
+                    height={200}
+                >
+                    <Column dataKey={'date'} head={'日期'} width={180} />
+                    <Column dataKey={'name'} head={'姓名'} width={180} />
+                    <Column dataKey={'address'} head={'地址'} width={360} />
+                </Table>
             </div>
         );
     }

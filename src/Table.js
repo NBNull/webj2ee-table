@@ -13,7 +13,8 @@ export default class Table extends React.Component {
     static propTypes = {
         data: PropTypes.array,
         border: PropTypes.bool,
-        stripe: PropTypes.bool
+        stripe: PropTypes.bool,
+        height: PropTypes.number
     };
 
     static defaultProps = {

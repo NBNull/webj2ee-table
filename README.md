@@ -31,6 +31,7 @@ npm install --save webj2ee-table
 | data   | 数据数组               | any\[]  | -      |
 | border | 是否展示外边框和列边框 | boolean | false  |
 | stripe | 是否显示间隔斑马纹     | boolean | false  |
+| height | Table 的高度           | number  | -      |
 
 ### `<Column>`
 
