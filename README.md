@@ -4,7 +4,11 @@
 
 ## Features
 
--   Support fixed header.
+-   支持外边框与列边框的显隐控制；
+-   支持斑马纹效果（隔行换色）；
+-   支持固定表头；
+-
+-
 
 ## Install
 
@@ -26,6 +30,7 @@ npm install --save webj2ee-table
 | ------ | ---------------------- | ------- | ------ |
 | data   | 数据数组               | any\[]  | -      |
 | border | 是否展示外边框和列边框 | boolean | false  |
+| stripe | 是否显示间隔斑马纹     | boolean | false  |
 
 ### `<Column>`
 

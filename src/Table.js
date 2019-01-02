@@ -12,7 +12,8 @@ export default class Table extends React.Component {
 
     static propTypes = {
         data: PropTypes.array,
-        border: PropTypes.bool
+        border: PropTypes.bool,
+        stripe: PropTypes.bool
     };
 
     static defaultProps = {
@@ -26,12 +27,13 @@ export default class Table extends React.Component {
         const columns = parseColumns(this.props);
 
         // 取数据
-        const { data, border } = this.props;
+        const { data, border, stripe } = this.props;
 
         // 边框样式控制
         const cls = classnames({
             [`${prefixCls}`]: true,
-            [`${prefixCls}-bordered`]: border
+            [`${prefixCls}-bordered`]: border,
+            [`${prefixCls}-stripe`]: stripe
         });
 
         return (

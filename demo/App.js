@@ -36,11 +36,26 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <Table data={this.state.data} border={true}>
-                <Column dataKey={'date'} head={'日期'} width={180} />
-                <Column dataKey={'name'} head={'姓名'} width={180} />
-                <Column dataKey={'address'} head={'地址'} width={360} />
-            </Table>
+            <div>
+                <h3>基础表格</h3>
+                <Table data={this.state.data}>
+                    <Column dataKey={'date'} head={'日期'} width={180} />
+                    <Column dataKey={'name'} head={'姓名'} width={180} />
+                    <Column dataKey={'address'} head={'地址'} width={360} />
+                </Table>
+                <h3>带边框</h3>
+                <Table data={this.state.data} border={true}>
+                    <Column dataKey={'date'} head={'日期'} width={180} />
+                    <Column dataKey={'name'} head={'姓名'} width={180} />
+                    <Column dataKey={'address'} head={'地址'} width={360} />
+                </Table>
+                <h3>斑马纹</h3>
+                <Table data={this.state.data} border={true} stripe={true}>
+                    <Column dataKey={'date'} head={'日期'} width={180} />
+                    <Column dataKey={'name'} head={'姓名'} width={180} />
+                    <Column dataKey={'address'} head={'地址'} width={360} />
+                </Table>
+            </div>
         );
     }
 }
