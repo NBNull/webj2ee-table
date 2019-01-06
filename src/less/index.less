@@ -6,8 +6,9 @@
     font-family: "Chinese Quote",-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
     table {
-        min-width: 100%;
+        width: 100%;
         border-collapse: collapse;
+        table-layout: fixed;
         text-align: left;
     }
 
@@ -16,16 +17,37 @@
         padding: 16px;
     }
 
-    &-header th{
-        background:#fafafa;
-        text-align: left;
-        font-weight: 500;
+    &-header-wrapper{
+        height: 54px;
+
+        .header{
+            overflow: hidden;
+
+            th{
+                background:#fafafa;
+                text-align: left;
+                font-weight: 500;
+            }
+        }
+
+        .gutter{
+            width: 16px;
+            border-right: 1px solid #e8e8e8;
+            height: 100%;
+            float: right;
+            background:#fafafa;
+        }
     }
+
 
     // 表格每行的底边始终有边框线
     th,
     td{
         border-bottom: 1px solid #e8e8e8;
+    }
+
+    &-body {
+        overflow: auto;
     }
 
     // 外边框线 + 列边框线
