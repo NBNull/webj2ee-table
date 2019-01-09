@@ -9,7 +9,12 @@ export default class Column extends React.Component {
     static propTypes = {
         dataKey: PropTypes.string,
         head: PropTypes.string,
-        width: PropTypes.number
+        width: PropTypes.number,
+        fixed: PropTypes.string
+    };
+
+    static defaultProps = {
+        width: 150
     };
 
     render() {

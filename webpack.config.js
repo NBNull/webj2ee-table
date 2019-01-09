@@ -1,6 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
 
+// version
+const pkg = require('./package.json');
+const version = pkg.version;
+
 module.exports = {
     mode: 'development',
     entry: './demo/index.js',
@@ -46,5 +50,8 @@ module.exports = {
             }
         ]
     },
-    plugins: [new webpack.HotModuleReplacementPlugin()]
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.BannerPlugin('webj2ee-table v' + version)
+    ]
 };

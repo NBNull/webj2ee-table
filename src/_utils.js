@@ -8,12 +8,13 @@ export function parseColumns(props) {
             return;
         }
 
-        const { dataKey, head, width } = column.props;
+        const { dataKey, head, width, fixed } = column.props;
 
         columns.push({
             dataKey,
             head,
-            width
+            width,
+            fixed
         });
     });
 
@@ -38,4 +39,29 @@ export function getScrollBarWidth() {
     body.removeChild(dom);
 
     return totalWidth - widthWithoutScroll;
+}
+
+/**
+ * 固定列相关接口
+ *
+ * 注：参考自 ant-design
+ */
+export function isAnyColumnsFixed(columns) {
+    return columns.some((column) => !!column.fixed);
+}
+
+export function isAnyColumnsLeftFixed(columns) {
+    return columns.some((column) => column.fixed === 'left');
+}
+
+export function isAnyColumnsRightFixed(columns) {
+    return columns.some((column) => column.fixed === 'right');
+}
+
+export function leftColumns(columns) {
+    return columns.filter((column) => column.fixed === 'left');
+}
+
+export function rightColumns(columns) {
+    return columns.filter((column) => column.fixed === 'right');
 }

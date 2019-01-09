@@ -1,11 +1,11 @@
 {
   "name": "webj2ee-table",
   "version": "1.0.0",
-  "description": "基于React的企业级表格",
+  "description": "老鬼的开源小表格",
   "main": "lib/index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "prepublish": "npm run compile"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,8 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "react": "^16.6.0",
-    "react-dom": "^16.6.0"
+    "react-dom": "^16.6.0",
+    "react-resizable": "^1.7.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",
